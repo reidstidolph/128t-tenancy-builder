@@ -7,6 +7,7 @@ To install the 128t-tenancy-builder, start by downloading or cloning this repo:
 $ git clone https://github.com/reidstidolph/128t-tenancy-builder.git
 ```
 Then serve up `index.html`, and all the other files with your favorite HTTP server.
+
 (node.js based [http-server](https://www.npmjs.com/package/http-server) works well)
 ```
 $ cd 128t-tenancy-builder
