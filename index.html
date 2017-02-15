@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style type="text/css">
+  
+  .node {
+    cursor: pointer;
+  }
+
+  .overlay{
+      background-color:#eee;
+  }
+   
+  .node circle {
+    fill: #fff;
+    stroke: #373a36;
+    stroke-width: 2px;
+  }
+   
+  .node text {
+    font-size:10px; 
+    font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+   
+  .link {
+    fill: none;
+    stroke: #c8c9c7;
+    stroke-width: 2px;
+  }
+
+  .templink {
+    fill: none;
+    stroke: #adef00;
+    stroke-width: 3px;
+  }
+
+  .ghostCircle.show{
+      display:block;
+  }
+
+  .ghostCircle, .activeDrag .ghostCircle{
+       display: none;
+  }
+
+  body{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0px;
+  }
+
+  #legend{
+    position: absolute;
+    bottom: 0;
+    background: white;
+    margin: 10px;
+    border-radius: 25px;
+    border: 2px solid #00ADEF;
+    padding: 20px; 
+    width: 150px;
+    height: 180px; 
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: small;
+  }
+
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<body>
+    <div id="tree-container"></div>
+    <div id="legend">
+      <table>
+        <tr>
+          <th>Icon</th>
+          <th>Name</th>
+        </tr>
+        <tr>
+          <td>
+            <img src="authority.png" height="25">
+          </td>
+          <td>Authority</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="tenant.png" height="25">
+          </td>
+          <td>Tenant</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="subtenant.png" height="25">
+          </td>
+          <td>Sub Tenant</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="service.png" height="25">
+          </td>
+          <td>Service</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="service-group.png" height="25">
+          </td>
+          <td>Service Group</td>
+        </tr>
+      </table>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

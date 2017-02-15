@@ -1,0 +1,107 @@
+{
+    "name": "Acme",
+    "type": "authority",
+    "children": [
+        {"name": "Corporate",
+            "type": "tenant",
+            "children": [
+                {"name": "Mail",
+                    "type": "service"
+                },
+                {"name": "Intranet",
+                    "type": "service"
+                },
+                {"name": "Business",
+                    "type": "subtenant",
+                    "children": [
+                        {"name": "Finance",
+                            "type": "subtenant",
+                            "children": [
+                                {"name": "ERP",
+                                    "type": "service"
+                                }
+                            ]
+                        },
+                        {"name": "CRM",
+                            "type": "service"
+                        },
+                        {"name": "Sales",
+                            "type": "subtenant",
+                            "children": []
+                        }
+                    ]
+                },
+                {"name": "Support",
+                    "type": "subtenant",
+                    "children": [
+                        {"name": "HR",
+                            "type": "subtenant",
+                            "children": []
+                        },
+                        {"name": "IT",
+                            "type": "subtenant",
+                            "children": []
+                        },
+                        {"name": "Helpdesk",
+                            "type": "service"
+                        }
+                    ]
+                },
+                {"name": "R&D",
+                    "type": "subtenant",
+                    "children": [
+                        {"name": "Code Repo",
+                            "type": "service"
+                        },
+                        {"name": "Engineering",
+                            "type": "subtenant",
+                            "children": [
+                                {"name": "Eng-Lab",
+                                    "type": "service"
+                                }
+                            ]
+                        },
+                        {"name": "QA",
+                            "type": "subtenant",
+                            "children": [
+                                {"name": "QA-Lab",
+                                    "type": "service"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {"name": "Guest",
+            "type": "tenant",
+            "children": [
+                {"name": "Internet",
+                    "type": "service"
+                }
+            ]
+        },
+        {"name": "Public",
+            "type": "tenant",
+            "children": [
+                {"name": "Website",
+                    "type": "service-group",
+                    "children": [
+                        {"name": "https",
+                            "type": "service"
+                        },
+                        {"name": "database",
+                            "type": "service"
+                        },
+                        {"name": "logs",
+                            "type": "service"
+                        }
+                    ]
+                },
+                {"name": "Partner API",
+                    "type": "service"
+                }
+            ]
+        }
+    ]
+ }   
